@@ -1,0 +1,558 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    list-style: none;
+}
+
+.wrapper{
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.wrapper-full{
+    max-width: 1262px;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%; /* Чтобы изображение не превышало размера контейнера в котором оно находится */
+    height: auto;  /* Чтобы изображение сжималось пропорционально по высоте */
+}
+
+
+.section-title{
+    color: rgb(16, 39, 70);
+    font-size: 35px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after{
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 253px;
+    height: 3px;
+    background-color: rgb(0, 109, 254);
+}
+/*header styles start */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.2s;
+    padding-bottom: 40px;
+    z-index: 999;
+}
+
+.header_active{ /* Просто состояние, этого класса может и не быть в HTML разметке */
+    background: rgb(14, 29, 40);
+}
+
+
+.header__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 56px;
+}
+
+.header__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header__item{
+    margin-right: 82px;
+}
+
+.header__item:last-child{
+    margin-right: 0;
+}
+
+.header__link{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.header__link:hover, .header__link:focus, .header__link:active{
+    opacity: .75;
+}
+
+
+/*header styles end */
+
+
+/*intro styles start */
+
+.intro{
+    padding-top: 263px;
+    background: url('../img/intro-bg.jpeg') no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 376px;
+}
+
+.intro__title{
+    width: 619px;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.intro__subtitle{
+    width: 546px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 59px;
+}
+
+.search-form__info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seacrh-form__field{
+    width: 297px;
+    background: transparent url('../img/svg/circle-ico.svg') no-repeat left 6px;
+    border: 0;
+    border-bottom: 2px solid rgb(191, 192, 197);
+    padding-left: 44px;
+    padding-bottom: 22px;
+    margin-right: 61px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.seacrh-form__field::placeholder{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.search-form__button{
+    width: 171px;
+    height: 58px;
+    background: rgb(27, 125, 255);
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 500;
+    border: none;
+}
+
+.search-form__button:hover, .search-form__button:focus, .search-form__button:active{
+    background-color: rgb(18 86 177);
+    cursor: pointer;
+}
+/*intro styles end */
+
+
+/*benefits styles start */
+
+.benefits{
+    margin-bottom: 131px;
+}
+
+
+.benefits__wrap{
+    max-width: 1262px;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 0px 2px 20px 0px rgba(21, 24, 36, 0.16);
+    position: relative;
+}
+
+.benefits__title{
+    color: rgb(16, 39, 70);
+    font-size: 35px;
+    font-weight: 500;
+    padding: 93px 100px 88px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-99%);
+    background-color: white;
+    width: 100%;
+}
+
+.benefits__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 55px;
+    padding: 0 100px;
+}
+
+.benefits__card{
+    grid-column: span 1;
+    width: 317px;
+    margin-bottom: 112px;
+}
+
+
+.benefits__card-pic{
+    max-width: 66px;
+    margin-bottom: 37px;
+}
+
+
+.benefits__card-title{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 26px;
+}
+
+.benefits__card-subtitle{
+    max-width: 310px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 39px;
+}
+
+.benefits__card-link{
+    color: rgb(0, 109, 254);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    background: url('../img/svg/arrow_right-ico.svg') no-repeat 95% center;
+    padding-right: 59px;
+    transition: 0.2s;
+}
+
+.benefits__card-link:hover, .benefits__card-link:focus{
+    background: url('../img/svg/arrow_right-ico.svg') no-repeat right center;
+}
+/* benefits styles end */
+
+
+
+
+/* places styles start */
+
+.places{
+    margin-bottom: 131px;
+}
+
+.places-caption{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;  /* Вообще должен быть отступ с places__title, но так надо сделать, чтобы отцентрировать 
+                             по флексу и это контейнер */
+}
+
+.places__link{
+    color: rgb(0, 109, 254);
+    font-size: 16px;
+    text-decoration: none;
+    background: url('../img/svg/arrow_right-ico.svg') no-repeat right center;
+    padding-right: 59px;
+}
+
+
+.places__link:hover, .places__link:focus{
+    opacity: 0.65;
+}
+
+
+
+.places__cards{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+
+.places__card-lg{
+    grid-column: span 3;
+}
+
+.places__card-sm{
+    grid-column: span 2;
+}
+
+.places__card-pic__size-lg{
+    height: 354px;
+    object-fit: cover;
+}
+
+.places__card-pic__size-sm{
+    height: 283px;
+    object-fit: cover;
+}
+
+.places__card{
+    position: relative;
+    overflow: hidden; /* Чтобы картинка не вылазила за контейнер */
+}
+
+.places__card:hover .places__card-pic{
+    transform: scale(1.05);
+}
+
+.places__card::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(21, 24, 36, 0.4);;
+}
+
+.places__card-pic{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.places__card-title{
+    position: absolute;
+    left: 29px;
+    bottom: 27px;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: 700;
+    z-index: 3;
+}
+
+.places__card-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+/* places styles end */
+
+/* tours styles start */
+
+.tours{
+    margin-bottom: 139px;
+}
+
+.tours__tour{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 100px;
+    align-items: center;
+}
+
+.tour_1{
+    margin-bottom: 70px;
+}
+
+.tour__title{
+    color: rgb(16, 39, 70);
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 85px;
+}
+
+.tour__descr{
+    width: 519px;
+    color: rgb(16, 39, 70);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 58px;
+}
+
+.tour__link{
+    color: rgb(0, 109, 254);
+    font-size: 16px;
+    text-decoration: none;
+    background: url('../img/svg/arrow_right-ico.svg') no-repeat right center;
+    padding-right: 59px;
+}
+
+
+.tour__link:hover, .tour__link:focus{
+    opacity: 0.65;
+}
+
+.tour__info{
+    padding-left: 47px;
+}
+/* tours styles end */
+
+/* top styles start */
+.top{
+    margin-bottom: 144px;
+}
+
+.top__title{
+    margin-bottom: 54px;
+}
+
+.top__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 58px 52px;
+}
+
+.top__card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; /* Это надо, чтобы поменять ось на Y */
+}
+
+.top__card-pic{
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.top__card-stats{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px 25px;
+}
+
+.top__card-stats-title{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 auto 0 0; /* Автопозиционирование margin (важно знать) */
+}
+
+.top__card-stats-likes{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 20px;
+    background: url(/img/svg/like.svg) no-repeat right;
+    margin-right: 14px;
+}
+
+.top__card-stats-comments{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 23px;
+    background: url(/img/svg/comment.svg) no-repeat right;
+}
+
+.top__descr{
+    color: rgb(16, 39, 70);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 31px;
+}
+
+.top__link{
+    padding: 12px 19px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    width: 118px;
+    height: 42px;
+    background: rgb(0, 109, 254);
+    text-decoration: none;
+    margin: auto 0 0 0; /* Это позволяет прибить кнопку к низу , потому что у контейнера есть флекс и направление оси Y */
+}
+
+.top__link:hover, .top__link:focus, .top__link:active{
+    background-color: rgb(18 86 177);
+}
+/* top styles end */
+
+
+/* videos styles start */
+.videos{
+    width: 100%;
+}
+
+.videos__wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.video__item{
+    padding-top: 56.25%;
+}
+
+.video__element{
+    position: absolute; /* Это делается для того, чтобы растянуть этот блок на всю ширину его контейнера */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* videos styles end */
+
+/* Footer styles start */
+
+.footer{
+    background: rgb(14, 29, 40);
+    padding: 119px 0;
+}
+
+.footer__logo{
+    width: 50%;
+    height: 50%;
+}
+
+.footer__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer__title{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.footer__link{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+
+.footer__link:hover, .footer__link:focus, .footer__link:active{
+    opacity: 0.65;
+}
+/* Footer styles end */
